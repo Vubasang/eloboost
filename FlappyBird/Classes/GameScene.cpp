@@ -25,7 +25,7 @@
 #include "GameScene.h"
 #include "HelloWorldScene.h"
 #include "GameOver.h"
-#include "PikachuGameMenu.h"
+#include "GamePikachu/PikachuGameMenu.h"
 #include "AudioEngine.h"
 
 USING_NS_CC;
@@ -115,8 +115,8 @@ bool GameScene::init()
     addChild(label);
 
     this->scheduleUpdate();
-    auto funPointer = static_cast<cocos2d::SEL_SCHEDULE>(&GameScene::CreatePipe);
-    this->schedule(funPointer, 0.003 * visibleSize.width);
+    auto createPipe = static_cast<cocos2d::SEL_SCHEDULE>(&GameScene::CreatePipe);
+    this->schedule(createPipe, 0.003 * visibleSize.width);
     //this->schedule(schedule_selector(GameScene::CreatePipe), 0.005 * visibleSize.width);
 
     auto touchListener = EventListenerTouchOneByOne::create();

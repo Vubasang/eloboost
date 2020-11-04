@@ -1,6 +1,6 @@
 #pragma once
 #include <cocos2d.h>
-#include <PikachuBoard.h>
+#include <GamePikachu/PikachuBoard.h>
 
 USING_NS_CC;
 

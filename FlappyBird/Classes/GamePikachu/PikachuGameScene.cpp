@@ -1,5 +1,5 @@
 #include "PikachuGameScene.h"
-#include <PikachuGameMenu.h>
+#include <GamePikachu/PikachuGameMenu.h>
 
 Scene* PikachuGameScene::createScene()
 {
