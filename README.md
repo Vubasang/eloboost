@@ -4,8 +4,11 @@
 - Аммосов Арсен
 - Тудупов Дугар
 - Диана Оконешникова
-
-### Команды строки:
+##
+## Ссылки:
+- [Концепт док](https://docs.google.com/document/d/1knzsO4lq7fIyrhKi6Dr16khufCv0ImcDgjriPugf6jY/edit)
+##
+## Команды строки:
 ```
 python ./setup.py
 ```
