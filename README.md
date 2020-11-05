@@ -1,4 +1,4 @@
-# ![CocosWolf3D Banner](https://github.com/Vubasang/eloboost/blob/main/FlappyBird/Resources/eloboost.png)
+# <p align="center">![CocosWolf3D Banner](https://github.com/Vubasang/eloboost/blob/main/FlappyBird/Resources/eloboost.png)</p>
 ## Группа БА-ИВТ-17:
 - Ву Ба Шанг
 - Аммосов Арсен
