@@ -15,8 +15,7 @@ cocos new FlappyBird -l cpp -p com.eloboost.flappybird
 ```
 cmake .. -G "Visual Studio 16 2019" -AWin32
 ```
-## Game: Flappy Bird
-# <p align="center">Flappy Bird</p>
+# <p align="center">Game: Flappy Bird</p>
 <h2 align="center">Demo Game</h2>
 <p align="center">
   <img alt="Demo" src="https://github.com/Vubasang/eloboost/blob/main/Demo.gif"/>
