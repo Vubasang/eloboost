@@ -2,6 +2,8 @@
 #include "HelloWorldScene.h"
 #include "Definitions.h"
 #include "AudioEngine.h"
+#include "ui/CocosGUI.h"
+
 
 USING_NS_CC;
 
@@ -37,10 +39,33 @@ bool Splash::init()
     /* Create background sprite */
     auto backgroundSprite = Sprite::create("logo.png");
     backgroundSprite->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height / 1.8 + origin.y));
-
     this->addChild(backgroundSprite);
 
+    //add label  "Loading..."
+    label = Label::createWithTTF("Loading...", "fonts/Marker Felt.ttf", visibleSize.height * 0.05);
+    label->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 4.9));
+    label->setColor(Color3B::WHITE);
+    addChild(label);
+
+    auto LoadingBar = ui::LoadingBar::create("loader-bar.png");
+    LoadingBar->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 7 + origin.y));
+    LoadingBar->setPercent(0);
+    this->addChild(LoadingBar, 3);
+    LoadingBar->setTag(100);
+
+    auto moveCloud = static_cast<cocos2d::SEL_SCHEDULE>(&Splash::MoveCloud);
+    this->schedule(moveCloud, 0.03);
     return true;
+}
+
+void Splash::MoveCloud(float dt)
+{
+    auto ma = (ui::LoadingBar*)this->getChildByTag(100);
+    ma->setPercent(ma->getPercent() + 1);
+    if (ma->getPercent() >= 100)
+    {
+        return;
+    }
 }
 
 void Splash::goToMainMenu(float displayTime)

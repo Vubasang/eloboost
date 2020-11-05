@@ -40,7 +40,7 @@ Layer* PikachuGameScene::showBoard()
 	auto boardView = PikachuBoardView::createBoardView(board);
 	this->addChild(boardView, 1);
 	float x = (Director::getInstance()->getVisibleSize().width - boardView->getContentSize().width) / 2;
-	float y = (Director::getInstance()->getVisibleSize().height - boardView->getContentSize().height) / 1.4;
+	float y = (Director::getInstance()->getVisibleSize().height - boardView->getContentSize().height) / 1.55;
 	boardView->setPosition({ x, y });
 	return boardView;
 }
@@ -56,7 +56,7 @@ void PikachuGameScene::showProgressTimer()
 	progressTimer->setBarChangeRate(Vec2(1.0f, 0.0f));
 	progressTimer->setPercentage(100);
 	progressTimer->setScale(screenSize.width / progressTimer->getContentSize().width - 0.2);
-	progressTimer->setPosition(screenSize.width / 2, screenSize.height / 6);
+	progressTimer->setPosition(screenSize.width / 2, screenSize.height / 8);
 	this->addChild(progressTimer);
 	progressTimer->runAction(ProgressFromTo::create(60, 100, 0));
 }

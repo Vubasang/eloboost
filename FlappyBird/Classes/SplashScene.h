@@ -6,6 +6,8 @@
 class Splash : public cocos2d::Scene
 {
 private:
+    cocos2d::Label* label;
+    void MoveCloud(float dt);
     void goToMainMenu(float displayTime);
 
 public:

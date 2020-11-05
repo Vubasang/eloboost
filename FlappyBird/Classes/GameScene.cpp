@@ -27,7 +27,6 @@
 #include "GameOver.h"
 #include "GamePikachu/PikachuGameMenu.h"
 #include "AudioEngine.h"
-#include "Definitions.h"
 
 USING_NS_CC;
 
@@ -180,7 +179,7 @@ bool GameScene::OnContactBegan(cocos2d::PhysicsContact& contact)
         }
     }
 
-    if (score == 4)
+    if (score == 3)
     {
         auto pikachuGameMenu = PikachuGameMenu::createScene();
         Director::getInstance()->replaceScene(
