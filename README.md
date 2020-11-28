@@ -18,6 +18,16 @@ cocos new FlappyBird -l cpp -p com.eloboost.flappybird
 ```
 cmake .. -G "Visual Studio 16 2019" -AWin32
 ```
+## Tags Github:
+```
+git tag -a v1.0 -m ""
+```
+```
+git tag
+```
+```
+git push --tags
+```
 ##
 # <p align="center">Game: Flappy Bird</p>
 <h1 align="center">Demo Game</h1>
